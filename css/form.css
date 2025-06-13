@@ -1,0 +1,175 @@
+/* Form Styling */
+.form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+    max-width: 800px; /* Giới hạn chiều rộng của form */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form .input-box {
+    margin-bottom: 20px;
+}
+
+.form .input-box label {
+    display: block;
+    font-size: 15px;
+    color: #34495e;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form .input-box input[type="text"],
+.form .input-box input[type="email"],
+.form .input-box input[type="password"],
+.form .input-box input[type="number"],
+.form .input-box input[type="file"],
+.form .input-box textarea {
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.form .input-box textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+.form .input-box input:focus,
+.form .input-box textarea:focus,
+.form .select-box select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.form .select-box {
+    position: relative;
+    width: 100%;
+}
+
+.form .select-box select {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    appearance: none; /* Remove default select arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Custom arrow for select box */
+.form .select-box::after {
+    content: '\f078'; /* FontAwesome angle-down icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+    pointer-events: none; /* Make sure the arrow doesn't block clicks */
+}
+
+/* Gender/Status Radio Buttons */
+.gender-box {
+    margin-bottom: 20px;
+}
+
+.gender-box h3 {
+    font-size: 15px;
+    color: #34495e;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.gender-option {
+    display: flex;
+    gap: 20px;
+}
+
+.gender-option .gender {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #34495e;
+}
+
+.gender-option .gender input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+    /* Basic styling for radio buttons - consider custom styles for better cross-browser consistency */
+}
+
+/* Form Submit Button */
+.form button[type="submit"], .form button[name="submit"] {
+    background-color: #2ecc71; /* Green submit button */
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Allow button to size to content */
+    display: block; /* Make it a block element to control margin-left/right auto */
+    margin: 20px auto 0 auto; /* Center the button */
+}
+
+.form button[type="submit"]:hover, .form button[name="submit"]:hover {
+    background-color: #27ae60;
+}
+
+/* Alert Messages */
+.alert-success, .alert-error {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Image previews in forms (for product-detail.php and product-update.php) */
+.input-box img {
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 4px;
+    object-fit: cover; /* Ensures images are cropped to fit without distortion */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Khoảng cách giữa các ảnh con */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
